@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Magefan_Stories::css/stories-m.css" />
+        <css src="Magefan_Stories::css/stories-l.css" media="screen and (min-width: 768px)"/>
+    </head>
+    <body>
+    	<referenceContainer name="sidebar.additional">
+            <block class="Magefan\Stories\Block\Sidebar" name="stories.sidebar" template="sidebar.phtml">
+                <block class="Magefan\Stories\Block\Sidebar\Search" name="stories.sidebar.search" template="sidebar/search.phtml" />
+                <block class="Magefan\Stories\Block\Sidebar\Categories" name="stories.sidebar.category" template="sidebar/categories.phtml">
+                    <action method="setCacheLifetime">
+                        <argument name="time" xsi:type="string">86400</argument>
+                    </action>
+                </block>
+                <block class="Magefan\Stories\Block\Sidebar\Recent" name="stories.sidebar.recent" template="sidebar/recent.phtml">
+                    <action method="setCacheLifetime">
+                        <argument name="time" xsi:type="string">86400</argument>
+                    </action>
+                </block>
+                <block class="Magefan\Stories\Block\Sidebar\Archive" name="stories.sidebar.archive" template="sidebar/archive.phtml">
+                    <action method="setCacheLifetime">
+                        <argument name="time" xsi:type="string">86400</argument>
+                    </action>
+                </block>
+            </block>
+            <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+            <referenceBlock name="wishlist_sidebar" remove="true"/>
+        </referenceContainer>
+    </body>
+</page>

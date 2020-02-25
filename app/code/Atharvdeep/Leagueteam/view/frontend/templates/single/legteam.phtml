@@ -1,0 +1,60 @@
+<?php  $_gridrecords = $block->getCollection(); 
+// get collection which we set in block class 
+?>
+<?php if ($_gridrecords && count($_gridrecords)): ?>
+    <div class="table-wrapper orders-history">
+        <table class="data table table-order-items history" id="my-orders-table">
+            <caption class="table-caption"><?php echo __('Grid Record') ?></caption>
+            <thead>
+                <tr>
+                    <th scope="col" class="col title"><?php echo __('Member Id') ?></th>
+                     <th scope="col" class="col title"><?php echo __('Member Name') ?></th>
+                       <th scope="col" class="col title"><?php echo __('Sponsor Id') ?></th>
+                     <th scope="col" class="col title"><?php echo __('Sponser Name') ?></th>
+                    <th scope="col" class="col date"><?php echo __('Joining Date') ?></th>
+                    <th scope="col" class="col ">&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php  // read collection as magento1.x and display in list 
+                  foreach ($_gridrecords as $_gridrecord):
+                    if (in_array($_gridrecord->getMemberId(), $block->getLevelTwoMember()))
+                    {
+                      $trclass = 'level-2';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelThreeMember())) {
+                      $trclass = 'level-3';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelFourMember())) {
+                      $trclass = 'level-4';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelFiveMember())) {
+                      $trclass = 'level-5';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelSixMember())) {
+                      $trclass = 'level-6';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelSevenMember())) {
+                      $trclass = 'level-7';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelEightMember())) {
+                      $trclass = 'level-8';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelNineMember())) {
+                      $trclass = 'level-9';
+                    }elseif (in_array($_gridrecord->getMemberId(), $block->getLevelTenMember())) {
+                      $trclass = 'level-10';
+                    }else{
+                      $trclass = '';
+                    }
+                     ?>
+                    <tr class="<?php echo $trclass ;?>">
+                        <td class="col shipping"><?php echo $_gridrecord->getMemberId() ?></td>
+                        <td class="col shipping"><?php echo $_gridrecord->getMemberName() ?></td>
+                        <td class="col shipping"><?php echo $_gridrecord->getSponsorId() ?></td>
+                        <td class="col shipping"><?php echo $_gridrecord->getSponsorName() ?></td>
+                        <td class="col date"><?php echo $block->formatDate($_gridrecord->getCreatedAt()) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php if ($block->getPagerHtml()): ?>
+        <div class="order-products-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); // for display pager block which we create in block file.   ?></div>
+    <?php endif ?>
+<?php else: ?>
+    <div class="message info empty"><span><?php echo __('grid records not available.'); ?></span></div>
+<?php endif ?>

@@ -1,0 +1,17 @@
+<div class='paykun'>
+	<div class='paykun-form'>
+			<div style="width:200px;margin:auto;margin-top:20px">
+			<img style="width:100%" src="<?php echo $block->getViewFileUrl('Paykun_Checkout::images/spinner.gif'); ?>">
+			<center>Redirecting you to Paykun</center>
+			</div>
+			<form name='paykunredirect' action="<?= $this->getAction()?>" method="post">
+                <input type="hidden" name="encrypted_request" id="encrypted_request" value="<?= $this->getEncrypt() ?>" />
+                <input type="hidden" name="merchant_id" id="merchant_id" value="<?= $this->getMerchant() ?>" />
+                <input type="hidden" name="access_token" id="access_token" value="<?= $this->getAccess()?>">
+			</form>
+			<script type="text/javascript">
+				document.paykunredirect.submit();
+			</script>
+	</div>
+	
+</div>

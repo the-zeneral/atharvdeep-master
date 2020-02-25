@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @var \Atharvdeep\Leagueteam\Block\Achievers $block
+ */
+
+$managerCollection = $block->getManagerCollection();
+$managerList = count($managerCollection);
+if($managerList > 1){ ?>
+<div><h1 align="center">Acheivers</h1></div>
+<div id="owl-manager" class="owl-carousel owl-theme">
+<?php
+foreach ($managerCollection as $manager) {
+ ?>
+   <div class="item"><h4> <?php echo $manager->getMemberName()?></h4>
+   	<h4> <?php echo $manager->getManager()?></h4> 
+   </div>
+ <?php } ?>
+</div>
+<div class="owl-controls">
+<div class="owl-nav">
+<div class="owl-demo-prev"></div>
+<div class="owl-demo-next"></div>
+</div>
+</div>
+<?php }else {}?>
+
+<script type="text/javascript">
+	require(['jquery','owl.carousel/owl.carousel.min'],function($){
+		jQuery(document).ready(function() {
+			$('.owl-carousel').owlCarousel({
+		    loop:false,
+		    margin:10,
+		    nav:false,
+		    responsive:{
+		        0:{
+		            items:1
+		        },
+		        600:{
+		            items:3
+		        },
+		        1000:{
+		            items: 4
+		        }
+		    }
+		   });
+			jQuery(".owl-demo-prev").click(function () {
+				jQuery("#owl-manager").trigger('prev.owl.carousel');
+			});
+			jQuery(".owl-demo-next").click(function () {
+				jQuery("#owl-manager").trigger('next.owl.carousel');
+			});
+		});
+	});
+</script>

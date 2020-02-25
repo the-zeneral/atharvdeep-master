@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Magefan_Stories::elements" title="Stories" module="Magefan_Stories" sortOrder="100"  resource="Magefan_Stories::elements"/>
+
+        <add id="Magefan_Stories::post" title="Posts" module="Magefan_Stories" parent="Magefan_Stories::elements" sortOrder="10" action="stories/post/" resource="Magefan_Stories::stories_post"/>
+
+        <add id="Magefan_Stories::category" title="Categories" module="Magefan_Stories" parent="Magefan_Stories::elements" sortOrder="20" action="stories/category/" resource="Magefan_Stories::stories_category"/>
+        
+        <add id="Magefan_Stories::settings" title="Settings" module="Magefan_Stories" parent="Magefan_Stories::elements" sortOrder="30" action="adminhtml/system_config/edit/section/mfstories/" resource="Magefan_Stories::stories_settings"/>
+        
+    </menu>
+</config>

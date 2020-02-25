@@ -1,0 +1,16 @@
+<?php 
+/**
+ * @var \Atharvdeep\Leagueteam\Block\Index\Thankyou $block
+ */
+$status = $block->getOrderStatus();
+?>
+<?php
+
+if ($status == 'pending' || $status == 'canceled' ) {?>
+<p> Your payment for towards Atharvdeep registration failed. Please try the following link to payment. Or you could Contact to admin.</p>
+<a href="<?php echo $block->getRetryLink();?>">  Retry to Pay INR 1700</a>
+<?php } elseif($status == 'processing'){?>
+<p> Your payment to registration is successful. Please Login to your account </p>
+<?php } else {?>
+<p> Unauthorized access :: Session Has Expired </p>
+<?php } ?>

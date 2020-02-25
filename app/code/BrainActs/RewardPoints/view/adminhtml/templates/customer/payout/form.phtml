@@ -1,0 +1,19 @@
+<?php $customer_id = $block->getCustomerId(); ?>
+<div id="customer_info_tabs_customer_edit_tab_action_content">
+<div class="entry-edit">
+<div class="entry-edit-head">
+</div>
+<div id="group_fields4" class="fieldset fieldset-wide">
+<div class="hor-scroll">
+<h2>Request for withdraw Bussiness Voucher</h2>
+<div>
+	<form action="<?php echo $this->getUrl('points/customer/withdrawVoucher', array('customer_id'=>$customer_id));?>" method="get">
+		<label>Withdrawal BV</label> <input type="text" name="withdraw_bv" />
+		<input type="submit" value="Withdraw BV" />
+	</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+

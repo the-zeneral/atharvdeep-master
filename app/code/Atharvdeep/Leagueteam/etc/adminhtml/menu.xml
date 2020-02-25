@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+    <menu>
+        <add id="Atharvdeep_Leagueteam::parent" title="Atharvdeep" module="Atharvdeep_Leagueteam" sortOrder="100" resource="Atharvdeep_Leagueteam::parent"/>
+		<add id="Atharvdeep_Leagueteam::manager" title="Manager" module="Atharvdeep_Leagueteam" sortOrder="10" parent="Atharvdeep_Leagueteam::parent" action="leagueteam/manager" resource="Atharvdeep_Leagueteam::manager"/>
+    </menu>
+</config>

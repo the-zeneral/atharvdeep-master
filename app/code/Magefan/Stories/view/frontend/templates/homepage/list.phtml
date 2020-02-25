@@ -1,0 +1,184 @@
+<style type="text/css">
+    .card{position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;background-color:#fff;border:1px solid rgba(0,0,0,.125);border-radius:.25rem}.card-block{-webkit-box-flex:1;-webkit-flex:1 1 auto;-ms-flex:1 1 auto;flex:1 1 auto;padding:1.25rem}.card-title{margin-bottom:.75rem}.card-subtitle{margin-top:-.375rem;margin-bottom:0}.card-text:last-child{margin-bottom:0}.card-link:hover{text-decoration:none}.card-link+.card-link{margin-left:1.25rem}.card>.list-group:first-child .list-group-item:first-child{border-top-right-radius:.25rem;border-top-left-radius:.25rem}.card>.list-group:last-child .list-group-item:last-child{border-bottom-right-radius:.25rem;border-bottom-left-radius:.25rem}.card-header{padding:.75rem 1.25rem;margin-bottom:0;background-color:#f7f7f9;border-bottom:1px solid rgba(0,0,0,.125)}.card-header:first-child{border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0}.card-footer{padding:.75rem 1.25rem;background-color:#f7f7f9;border-top:1px solid rgba(0,0,0,.125)}.card-footer:last-child{border-radius:0 0 calc(.25rem - 1px) calc(.25rem - 1px)}.card-header-tabs{margin-right:-.625rem;margin-bottom:-.75rem;margin-left:-.625rem;border-bottom:0}.card-header-pills{margin-right:-.625rem;margin-left:-.625rem}.card-primary{background-color:#0275d8;border-color:#0275d8}.card-primary .card-footer,.card-primary .card-header{background-color:transparent}.card-success{background-color:#5cb85c;border-color:#5cb85c}.card-success .card-footer,.card-success .card-header{background-color:transparent}.card-info{background-color:#5bc0de;border-color:#5bc0de}.card-info .card-footer,.card-info .card-header{background-color:transparent}.card-warning{background-color:#f0ad4e;border-color:#f0ad4e}.card-warning .card-footer,.card-warning .card-header{background-color:transparent}.card-danger{background-color:#d9534f;border-color:#d9534f}.card-danger .card-footer,.card-danger .card-header{background-color:transparent}.card-outline-primary{background-color:transparent;border-color:#0275d8}.card-outline-secondary{background-color:transparent;border-color:#ccc}.card-outline-info{background-color:transparent;border-color:#5bc0de}.card-outline-success{background-color:transparent;border-color:#5cb85c}.card-outline-warning{background-color:transparent;border-color:#f0ad4e}.card-outline-danger{background-color:transparent;border-color:#d9534f}.card-inverse{color:rgba(255,255,255,.65)}.card-inverse .card-footer,.card-inverse .card-header{background-color:transparent;border-color:rgba(255,255,255,.2)}.card-inverse .card-blockquote,.card-inverse .card-footer,.card-inverse .card-header,.card-inverse .card-title{color:#fff}.card-inverse .card-blockquote .blockquote-footer,.card-inverse .card-link,.card-inverse .card-subtitle,.card-inverse .card-text{color:rgba(255,255,255,.65)}.card-inverse .card-link:focus,.card-inverse .card-link:hover{color:#fff}.card-blockquote{padding:0;margin-bottom:0;border-left:0}.card-img{border-radius:calc(.25rem - 1px)}.card-img-overlay{position:absolute;top:0;right:0;bottom:0;left:0;padding:1.25rem}.card-img-top{border-top-right-radius:calc(.25rem - 1px);border-top-left-radius:calc(.25rem - 1px)}.card-img-bottom{border-bottom-right-radius:calc(.25rem - 1px);border-bottom-left-radius:calc(.25rem - 1px)}@media (min-width:576px){.card-deck{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap}.card-deck .card{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex:1;-webkit-flex:1 0 0%;-ms-flex:1 0 0%;flex:1 0 0%;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.card-deck .card:not(:first-child){margin-left:15px}.card-deck .card:not(:last-child){margin-right:15px}}@media (min-width:576px){.card-group{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-flow:row wrap;-ms-flex-flow:row wrap;flex-flow:row wrap}.card-group .card{-webkit-box-flex:1;-webkit-flex:1 0 0%;-ms-flex:1 0 0%;flex:1 0 0%}.card-group .card+.card{margin-left:0;border-left:0}.card-group .card:first-child{border-bottom-right-radius:0;border-top-right-radius:0}.card-group .card:first-child .card-img-top{border-top-right-radius:0}.card-group .card:first-child .card-img-bottom{border-bottom-right-radius:0}.card-group .card:last-child{border-bottom-left-radius:0;border-top-left-radius:0}.card-group .card:last-child .card-img-top{border-top-left-radius:0}.card-group .card:last-child .card-img-bottom{border-bottom-left-radius:0}.card-group .card:not(:first-child):not(:last-child){border-radius:0}.card-group .card:not(:first-child):not(:last-child) .card-img-bottom,.card-group .card:not(:first-child):not(:last-child) .card-img-top{border-radius:0}}@media (min-width:576px){.card-columns{-webkit-column-count:3;-moz-column-count:3;column-count:3;-webkit-column-gap:1.25rem;-moz-column-gap:1.25rem;column-gap:1.25rem}.card-columns .card{display:inline-block;width:100%;margin-bottom:.75rem}}.img-fluid{max-width:100%;height:auto}
+    img.card-img-top.img-fluid{
+        display: block;
+        transition: 1.0s ease;
+        transform-origin: 50% 50%;
+    }
+    .card-img-top.img-fluid {
+        position: relative ;
+    }
+    .card-img-top.img-fluid:hover {
+        transform: scale(1.05);
+    }
+
+    @media (min-width:576px){
+        .home-card-parent{
+            overflow: hidden;
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+        .card-columns .card{
+            display: flex;
+            margin-bottom: 0;
+            border: 0;
+        }
+    }
+    .RefreshComponent .product-tile-carousel__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        width: calc(192px * 5);
+    }
+    .RefreshComponent .codified-product-tile__product-image__container--product {
+    width: 150px;
+    height: 150px;
+   }
+    .RefreshComponent .codified-product-tile{
+        background: #fff;
+    }
+    .RefreshComponent .codified-product-tile__inside-content {
+        margin: 20px;
+    }
+    .RefreshComponent .codified-product-tile__row--brand-image-compare {
+    height: 34px;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 18px;
+    }
+    .RefreshComponent .codified-product-tile__brand-image {
+    width: 75px;
+    height: 30px;
+    }
+    .RefreshComponent .codified-product-tile__row--title {
+    width: 150px;
+    margin-top: 6px;
+    margin-bottom: 0;
+    height: 38px;
+    color: #333;
+    overflow: hidden;
+   }
+
+    .RefreshComponent .codified-product-tile__row--price-button {
+        background: #ffab00;
+        font-weight: 400;
+        font-stretch: normal;
+        font-size: 25px;
+        border-radius: 2px;
+        flex: 1 0 100%;
+        text-align: center;
+        height: 36px;
+        align-items: center;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: row;
+        display: flex;
+        float: none;
+    }
+    .RefreshComponent .codified-product-tile__order--instore {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 8px;
+    height: 20px;
+    }
+    .inside-layout {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+    }
+    .refresh-homepage-carousel-wrapper .carousel-heading{
+        margin: 25px 0;
+    }
+    .primaryh2, .secondaryh2, .bannerh2{
+        font-size: 30px;
+        color: #0d5257;
+        font-family: 'Futura W01 Heavy',sans-serif
+    }
+   
+</style>
+<?php
+$data = $this->getPostCollection();
+$posts = $data['posts'];
+$_helper    = $this->helper('Magefan\Stories\Helper\Image');
+
+$objectManager  = \Magento\Framework\App\ObjectManager::getInstance();
+$storemanager = $objectManager->get('Magento\Store\Model\StoreManagerInterface') ;
+$baseurl = $storemanager->getStore()->getBaseUrl();
+?>
+<?php
+foreach ($posts as $item )
+{
+    $item->setData('is_displayed_home',0);
+    $item->save();
+}
+?>
+<div class="mobile-banner">
+    <img src="/pub/media/wysiwyg/MOBILE.jpg">
+</div>
+<div class="value-proposition">
+    <div class="value-parent">
+        <div class="value-child c-left">
+            <img src="/pub/media/wysiwyg/Genuine_brands_quality_products.jpg">
+        </div>
+        <div class="value-child c-right">GENUINE BRANDS &<br>QUALITY PRODUCTS</div>
+    </div>
+    <div class="value-parent">
+        <div class="value-child c-left">
+            <img src="/pub/media/wysiwyg/Free_warehouse_pickup.jpg">
+        </div>
+        <div class="value-child c-right">FREE WAREHOUSE<br>PICKUP</div>
+    </div>
+    <div class="value-parent">
+        <div class="value-child c-left">
+            <img src="/pub/media/wysiwyg/Priority_shipment.jpg">
+        </div>
+        <div class="value-child c-right">PRIORITY<br>SHIPMENT</div>
+    </div>
+    <div class="value-parent">
+        <div class="value-child c-left">
+            <img src="/pub/media/wysiwyg/GST_ready_billing.jpg">
+        </div>
+        <div class="value-child c-right">GST READY<br>BILLING</div>
+    </div> 
+    <div class="value-parent">
+        <div class="value-child c-left">
+            <img src="/pub/media/wysiwyg/web_site_lp_new-Recovered.jpg">
+        </div>
+        <div class="value-child c-right">PROJECT TO PROJECT<br>PROCUREMENT</div>
+    </div>
+</div>
+<div class="inside-layout refresh-homepage-carousel-wrapper">
+    <h4 class="carousel-heading primaryh2">
+            Great range of flooring at warehouse prices         
+        </h4>
+<div class="RefreshComponent">
+<div tabindex="-1" style="width: 100%; display: inline-block;">
+    <div class="product-tile-carousel__row">
+        <?php for ($i=0; $i <10 ; $i++) { ?>
+          
+        <div class="codified-product-tile">
+            <div class="codified-product-tile__inside-content">
+                <div class="codified-product-tile__product-image">
+                    <div class="codified-product-tile__product-image__container--product"><img src="https://2ecffd01e1ab3e9383f0-07db7b9624bbdf022e3b5395236d5cf8.ssl.cf4.rackcdn.com/Product-190x190/5965898e-ec64-4cc6-aa9b-b15426eacf46.jpg" alt="Hanwood 10mm Rustic Parquet Laminate Flooring" class="codified-product-tile__product-image__image--product"></div>
+                </div>
+                <div class="codified-product-tile__row codified-product-tile__row--brand-image-compare">
+                    <div class="codified-product-tile__brand-image"><img src="https://2ecffd01e1ab3e9383f0-07db7b9624bbdf022e3b5395236d5cf8.ssl.cf4.rackcdn.com/Brand-62x40/94b4a614-a8d1-41d9-bcae-6d3452a7c84b.png" alt="Johnson Tiles"></div>
+                </div>
+                <div class="codified-product-tile__row codified-product-tile__row--title">
+                    <div><p title="Hanwood 10mm Rustic Parquet Laminate Flooring">Hanwood 10mm Rustic Parquet Laminate...</p></div>
+                </div>
+                <div class="codified-product-tile__row codified-product-tile__row--order-options">
+                    <div class="codified-product-tile__order--instore">
+                        <p class="">Buy in-store only</p>
+                    </div>
+                </div>
+
+                <div class="codified-product-tile__row--price-button has-price-value"><div class="codified-product-tile__price"><div class="codified-product-tile__price--value price-value"><span itemprop="priceCurrency" content="AUD" class="codified-product-tile__price--value--currency-symbol">$</span><span class="codified-product-tile__price--value--dollars">81</span><span class="codified-product-tile__price--value--decimal-cents">.76</span></div><div class="codified-product-tile__price--value--unit-measurement"><p></p></div></div></div>
+            </div>
+        </div>
+        <?php   # code...
+        } ?>
+    </div>
+</div>
+</div>
+</div>
